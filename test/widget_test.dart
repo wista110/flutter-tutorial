@@ -13,11 +13,11 @@ import 'package:hello_cursor_flutter/counter_app.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(const CounterApp()); // MyApp → CounterApp に変更
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('2'), findsNothing); // 1 → 2 に変更（2ずつ増えるため）
 
     // Tap the '+' icon and trigger a frame.
     await tester.tap(find.byIcon(Icons.add));
@@ -25,6 +25,6 @@ void main() {
 
     // Verify that our counter has incremented.
     expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('2'), findsOneWidget); // 1 → 2 に変更（2ずつ増えるため）
   });
 }

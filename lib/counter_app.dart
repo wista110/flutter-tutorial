@@ -20,7 +20,7 @@ class CounterApp extends StatelessWidget {
         // テーマカラーを緑色に変更してみました！
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
         // 日本語対応フォントを設定
-        textTheme: GoogleFonts.notoSansJpTextTheme(),
+        // textTheme: GoogleFonts.notoSansJpTextTheme(), ← この行をコメントアウト
       ),
       home: const MyHomePage(title: '私のカウンターアプリ'),
     );

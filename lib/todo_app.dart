@@ -26,7 +26,7 @@ class TodoApp extends StatelessWidget {
       title: '私のToDoリスト',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-        textTheme: GoogleFonts.notoSansJpTextTheme(),
+        // textTheme: GoogleFonts.notoSansJpTextTheme(), ← この行をコメントアウト
       ),
       home: const TodoListPage(title: '私のToDoリスト'),
     );
